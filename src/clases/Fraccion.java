@@ -36,7 +36,7 @@ public class Fraccion {
         this.denominador = denominador;
     }
 
-    public Fraccion sumar(Fraccion f2){
+    public Fraccion sumar(Fraccion f2) {
         Fraccion f;
         int num, den;
 
@@ -46,7 +46,7 @@ public class Fraccion {
         return f;
     }
 
-    public Fraccion restar(Fraccion f2){
+    public Fraccion restar(Fraccion f2) {
         Fraccion f;
         int num, den;
 
@@ -55,4 +55,40 @@ public class Fraccion {
         f = new Fraccion(num, den);
         return f;
     }
+
+    public Fraccion multiplicar(Fraccion f2) {
+        Fraccion f;
+        int num, den;
+
+        num = this.numerador * f2.numerador;
+        den = this.denominador * f2.denominador;
+        f = new Fraccion(num, den);
+        return f;
+    }
+    
+    public Fraccion dividir(Fraccion f2) {
+        Fraccion f;
+        int num, den;
+
+        num = this.numerador * f2.denominador;
+        den = this.denominador * f2.numerador;
+        f = new Fraccion(num, den);
+        return f;
+    }
+    /*
+    public Fraccion convertir(Fraccion f3) {
+        Fraccion f;
+        int cociente,residuo,num, den,ent;
+
+        cociente = f3.numerador / f3.denominador;
+        residuo = f3.numerador % f3.denominador;
+        
+        ent= cociente;
+        num= residuo;
+        den= f3.denominador;
+        
+        
+        f = new Fraccion(num, den,ent);
+        return f;
+    }*/
 }
